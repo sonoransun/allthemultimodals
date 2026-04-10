@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "BID-00001",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Meeting agenda for Q2 planning session",
+    "document_type": "docx",
+    "document_content": "Annual Report 2025: Revenue increased by 12% year-over-year, driven by strong performance in the cloud services division.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00002",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Recipe: Classic Margherita Pizza - Ingredients: flour, tomatoes, mozzarella, basil",
+    "document_type": "pdf",
+    "document_content": "Employee Handbook Section 4.2: All employees are entitled to 28 days annual leave plus bank holidays.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00003",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Store hours: Monday-Friday 9am-6pm, Saturday 10am-4pm, Sunday closed",
+    "document_type": "pdf",
+    "document_content": "Research Paper Abstract: We present a novel approach to natural language processing that improves accuracy by 15% on standard benchmarks.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00004",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Product specifications: Weight 2.5kg, Dimensions 30x20x15cm",
+    "document_type": "pdf",
+    "document_content": "Invoice #INV-2026-0042: Web development services, 40 hours at £75/hour, total £3,000 plus VAT.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00005",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Event flyer: Community garden cleanup, Saturday March 15th at 9am",
+    "document_type": "docx",
+    "document_content": "Meeting Minutes: The board approved the Q3 budget allocation of £500,000 for infrastructure upgrades.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00006",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Menu: Today's specials - Soup of the day, Fish and chips, Vegetarian lasagne",
+    "document_type": "pdf",
+    "document_content": "Lease Agreement: Term begins 1 April 2026, monthly rent £1,200, deposit £2,400.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00007",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Safety notice: Please wear hard hats in this area",
+    "document_type": "pdf",
+    "document_content": "Project Proposal: Development of a mobile app for patient appointment scheduling.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00008",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Map showing walking routes around the lake",
+    "document_type": "pdf",
+    "document_content": "Course Syllabus: Introduction to Data Science, covering statistics, Python, and machine learning.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00009",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Infographic about climate change statistics",
+    "document_type": "docx",
+    "document_content": "Technical Documentation: API endpoint /users accepts GET and POST requests with JSON payloads.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00010",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Birth certificate template with blank fields",
+    "document_type": "docx",
+    "document_content": "Business Plan: Market analysis shows a 23% growth opportunity in the sustainable packaging sector.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00011",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Wedding invitation with floral border design",
+    "document_type": "docx",
+    "document_content": "Medical report: Patient shows improvement in mobility following 6 weeks of physiotherapy.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00012",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Nutritional information label for cereal box",
+    "document_type": "docx",
+    "document_content": "Legal brief: The claimant seeks damages under the Consumer Rights Act 2015.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00013",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Travel itinerary: London to Edinburgh, departing 08:45",
+    "document_type": "docx",
+    "document_content": "Grant application for renewable energy research, requesting £250,000 over 3 years.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00014",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Conference badge: Dr. Sarah Chen, University of Cambridge",
+    "document_type": "docx",
+    "document_content": "Thesis chapter on the economic impact of Brexit on small businesses in the Midlands.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00015",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Parking permit valid until December 2026",
+    "document_type": "pdf",
+    "document_content": "User manual for a smart thermostat: Installation, setup, and troubleshooting guide.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00016",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Floor plan of a two-bedroom apartment",
+    "document_type": "docx",
+    "document_content": "CV/Resume: 5 years experience in software engineering, proficient in Python, JavaScript, AWS.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00017",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Bus timetable for Route 42",
+    "document_type": "docx",
+    "document_content": "Insurance policy document: Home contents cover up to £50,000, excess £100.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00018",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Whiteboard notes from a brainstorming session about marketing ideas",
+    "document_type": "docx",
+    "document_content": "Tax return summary: Total income £45,000, tax paid £9,500, National Insurance £4,200.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00019",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Certificate of completion for first aid training",
+    "document_type": "pdf",
+    "document_content": "School newsletter: Sports day scheduled for June 15th, parents welcome to attend.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00020",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Shopping list: milk, eggs, bread, butter, apples, chicken",
+    "document_type": "pdf",
+    "document_content": "Recipe book chapter: Traditional British baking - scones, Victoria sponge, shortbread.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00021",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Handwritten note: Don't forget to call mum!",
+    "document_type": "docx",
+    "document_content": "Annual Report 2025: Revenue increased by 12% year-over-year, driven by strong performance in the cloud services division.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00022",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Chart showing quarterly revenue growth",
+    "document_type": "pdf",
+    "document_content": "Employee Handbook Section 4.2: All employees are entitled to 28 days annual leave plus bank holidays.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00023",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Photo of a sunset over the ocean",
+    "document_type": "docx",
+    "document_content": "Research Paper Abstract: We present a novel approach to natural language processing that improves accuracy by 15% on standard benchmarks.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00024",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Screenshot of a code editor with Python syntax",
+    "document_type": "docx",
+    "document_content": "Invoice #INV-2026-0042: Web development services, 40 hours at £75/hour, total £3,000 plus VAT.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00025",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Graph comparing global temperatures over 50 years",
+    "document_type": "docx",
+    "document_content": "Meeting Minutes: The board approved the Q3 budget allocation of £500,000 for infrastructure upgrades.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00026",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Diagram of the human circulatory system",
+    "document_type": "docx",
+    "document_content": "Lease Agreement: Term begins 1 April 2026, monthly rent £1,200, deposit £2,400.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00027",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "A cat sitting on a laptop keyboard",
+    "document_type": "docx",
+    "document_content": "Project Proposal: Development of a mobile app for patient appointment scheduling.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00028",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Street sign showing directions to the train station",
+    "document_type": "pdf",
+    "document_content": "Course Syllabus: Introduction to Data Science, covering statistics, Python, and machine learning.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00029",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Restaurant review card: 4.5 stars, 'Excellent food and service'",
+    "document_type": "pdf",
+    "document_content": "Technical Documentation: API endpoint /users accepts GET and POST requests with JSON payloads.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00030",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "A child's drawing of a house with a garden",
+    "document_type": "docx",
+    "document_content": "Business Plan: Market analysis shows a 23% growth opportunity in the sustainable packaging sector.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00031",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Scientific paper abstract about machine learning optimization",
+    "document_type": "pdf",
+    "document_content": "Medical report: Patient shows improvement in mobility following 6 weeks of physiotherapy.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00032",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Volunteer sign-up sheet with names and phone numbers",
+    "document_type": "pdf",
+    "document_content": "Legal brief: The claimant seeks damages under the Consumer Rights Act 2015.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00033",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Museum exhibit label describing a Roman mosaic",
+    "document_type": "pdf",
+    "document_content": "Grant application for renewable energy research, requesting £250,000 over 3 years.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00034",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "University lecture slide about photosynthesis",
+    "document_type": "pdf",
+    "document_content": "Thesis chapter on the economic impact of Brexit on small businesses in the Midlands.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00035",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Newspaper headline: 'Local team wins championship'",
+    "document_type": "pdf",
+    "document_content": "User manual for a smart thermostat: Installation, setup, and troubleshooting guide.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00036",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Handwritten math equations on graph paper",
+    "document_type": "pdf",
+    "document_content": "CV/Resume: 5 years experience in software engineering, proficient in Python, JavaScript, AWS.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00037",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Calendar showing bank holidays for 2026",
+    "document_type": "docx",
+    "document_content": "Insurance policy document: Home contents cover up to £50,000, excess £100.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00038",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "RSVP card for a birthday party",
+    "document_type": "pdf",
+    "document_content": "Tax return summary: Total income £45,000, tax paid £9,500, National Insurance £4,200.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00039",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Gym class schedule posted on a bulletin board",
+    "document_type": "docx",
+    "document_content": "School newsletter: Sports day scheduled for June 15th, parents welcome to attend.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00040",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Price tag showing £29.99 with a 20% discount",
+    "document_type": "pdf",
+    "document_content": "Recipe book chapter: Traditional British baking - scones, Victoria sponge, shortbread.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00041",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Meeting agenda for Q2 planning session",
+    "document_type": "pdf",
+    "document_content": "Annual Report 2025: Revenue increased by 12% year-over-year, driven by strong performance in the cloud services division.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00042",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Recipe: Classic Margherita Pizza - Ingredients: flour, tomatoes, mozzarella, basil",
+    "document_type": "docx",
+    "document_content": "Employee Handbook Section 4.2: All employees are entitled to 28 days annual leave plus bank holidays.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00043",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Store hours: Monday-Friday 9am-6pm, Saturday 10am-4pm, Sunday closed",
+    "document_type": "pdf",
+    "document_content": "Research Paper Abstract: We present a novel approach to natural language processing that improves accuracy by 15% on standard benchmarks.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00044",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Product specifications: Weight 2.5kg, Dimensions 30x20x15cm",
+    "document_type": "pdf",
+    "document_content": "Invoice #INV-2026-0042: Web development services, 40 hours at £75/hour, total £3,000 plus VAT.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00045",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Event flyer: Community garden cleanup, Saturday March 15th at 9am",
+    "document_type": "pdf",
+    "document_content": "Meeting Minutes: The board approved the Q3 budget allocation of £500,000 for infrastructure upgrades.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00046",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Menu: Today's specials - Soup of the day, Fish and chips, Vegetarian lasagne",
+    "document_type": "pdf",
+    "document_content": "Lease Agreement: Term begins 1 April 2026, monthly rent £1,200, deposit £2,400.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00047",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Safety notice: Please wear hard hats in this area",
+    "document_type": "docx",
+    "document_content": "Project Proposal: Development of a mobile app for patient appointment scheduling.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00048",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Map showing walking routes around the lake",
+    "document_type": "docx",
+    "document_content": "Course Syllabus: Introduction to Data Science, covering statistics, Python, and machine learning.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00049",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Infographic about climate change statistics",
+    "document_type": "pdf",
+    "document_content": "Technical Documentation: API endpoint /users accepts GET and POST requests with JSON payloads.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00050",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Birth certificate template with blank fields",
+    "document_type": "docx",
+    "document_content": "Business Plan: Market analysis shows a 23% growth opportunity in the sustainable packaging sector.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00051",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Wedding invitation with floral border design",
+    "document_type": "pdf",
+    "document_content": "Medical report: Patient shows improvement in mobility following 6 weeks of physiotherapy.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00052",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Nutritional information label for cereal box",
+    "document_type": "docx",
+    "document_content": "Legal brief: The claimant seeks damages under the Consumer Rights Act 2015.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00053",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Travel itinerary: London to Edinburgh, departing 08:45",
+    "document_type": "pdf",
+    "document_content": "Grant application for renewable energy research, requesting £250,000 over 3 years.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00054",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Conference badge: Dr. Sarah Chen, University of Cambridge",
+    "document_type": "docx",
+    "document_content": "Thesis chapter on the economic impact of Brexit on small businesses in the Midlands.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00055",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Parking permit valid until December 2026",
+    "document_type": "docx",
+    "document_content": "User manual for a smart thermostat: Installation, setup, and troubleshooting guide.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00056",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Floor plan of a two-bedroom apartment",
+    "document_type": "pdf",
+    "document_content": "CV/Resume: 5 years experience in software engineering, proficient in Python, JavaScript, AWS.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00057",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Bus timetable for Route 42",
+    "document_type": "pdf",
+    "document_content": "Insurance policy document: Home contents cover up to £50,000, excess £100.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00058",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Whiteboard notes from a brainstorming session about marketing ideas",
+    "document_type": "docx",
+    "document_content": "Tax return summary: Total income £45,000, tax paid £9,500, National Insurance £4,200.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00059",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Certificate of completion for first aid training",
+    "document_type": "docx",
+    "document_content": "School newsletter: Sports day scheduled for June 15th, parents welcome to attend.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00060",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Shopping list: milk, eggs, bread, butter, apples, chicken",
+    "document_type": "pdf",
+    "document_content": "Recipe book chapter: Traditional British baking - scones, Victoria sponge, shortbread.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00061",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Handwritten note: Don't forget to call mum!",
+    "document_type": "pdf",
+    "document_content": "Annual Report 2025: Revenue increased by 12% year-over-year, driven by strong performance in the cloud services division.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00062",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Chart showing quarterly revenue growth",
+    "document_type": "docx",
+    "document_content": "Employee Handbook Section 4.2: All employees are entitled to 28 days annual leave plus bank holidays.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00063",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Photo of a sunset over the ocean",
+    "document_type": "pdf",
+    "document_content": "Research Paper Abstract: We present a novel approach to natural language processing that improves accuracy by 15% on standard benchmarks.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00064",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Screenshot of a code editor with Python syntax",
+    "document_type": "pdf",
+    "document_content": "Invoice #INV-2026-0042: Web development services, 40 hours at £75/hour, total £3,000 plus VAT.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00065",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Graph comparing global temperatures over 50 years",
+    "document_type": "docx",
+    "document_content": "Meeting Minutes: The board approved the Q3 budget allocation of £500,000 for infrastructure upgrades.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00066",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Diagram of the human circulatory system",
+    "document_type": "pdf",
+    "document_content": "Lease Agreement: Term begins 1 April 2026, monthly rent £1,200, deposit £2,400.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00067",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "A cat sitting on a laptop keyboard",
+    "document_type": "docx",
+    "document_content": "Project Proposal: Development of a mobile app for patient appointment scheduling.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00068",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Street sign showing directions to the train station",
+    "document_type": "docx",
+    "document_content": "Course Syllabus: Introduction to Data Science, covering statistics, Python, and machine learning.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00069",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Restaurant review card: 4.5 stars, 'Excellent food and service'",
+    "document_type": "pdf",
+    "document_content": "Technical Documentation: API endpoint /users accepts GET and POST requests with JSON payloads.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00070",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "A child's drawing of a house with a garden",
+    "document_type": "docx",
+    "document_content": "Business Plan: Market analysis shows a 23% growth opportunity in the sustainable packaging sector.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00071",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Scientific paper abstract about machine learning optimization",
+    "document_type": "pdf",
+    "document_content": "Medical report: Patient shows improvement in mobility following 6 weeks of physiotherapy.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00072",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Volunteer sign-up sheet with names and phone numbers",
+    "document_type": "docx",
+    "document_content": "Legal brief: The claimant seeks damages under the Consumer Rights Act 2015.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00073",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Museum exhibit label describing a Roman mosaic",
+    "document_type": "pdf",
+    "document_content": "Grant application for renewable energy research, requesting £250,000 over 3 years.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00074",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "University lecture slide about photosynthesis",
+    "document_type": "pdf",
+    "document_content": "Thesis chapter on the economic impact of Brexit on small businesses in the Midlands.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00075",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Newspaper headline: 'Local team wins championship'",
+    "document_type": "docx",
+    "document_content": "User manual for a smart thermostat: Installation, setup, and troubleshooting guide.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00076",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Handwritten math equations on graph paper",
+    "document_type": "docx",
+    "document_content": "CV/Resume: 5 years experience in software engineering, proficient in Python, JavaScript, AWS.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00077",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Calendar showing bank holidays for 2026",
+    "document_type": "docx",
+    "document_content": "Insurance policy document: Home contents cover up to £50,000, excess £100.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00078",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "RSVP card for a birthday party",
+    "document_type": "docx",
+    "document_content": "Tax return summary: Total income £45,000, tax paid £9,500, National Insurance £4,200.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00079",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Gym class schedule posted on a bulletin board",
+    "document_type": "docx",
+    "document_content": "School newsletter: Sports day scheduled for June 15th, parents welcome to attend.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00080",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Price tag showing £29.99 with a 20% discount",
+    "document_type": "docx",
+    "document_content": "Recipe book chapter: Traditional British baking - scones, Victoria sponge, shortbread.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00081",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Meeting agenda for Q2 planning session",
+    "document_type": "docx",
+    "document_content": "Annual Report 2025: Revenue increased by 12% year-over-year, driven by strong performance in the cloud services division.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00082",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Recipe: Classic Margherita Pizza - Ingredients: flour, tomatoes, mozzarella, basil",
+    "document_type": "docx",
+    "document_content": "Employee Handbook Section 4.2: All employees are entitled to 28 days annual leave plus bank holidays.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00083",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Store hours: Monday-Friday 9am-6pm, Saturday 10am-4pm, Sunday closed",
+    "document_type": "pdf",
+    "document_content": "Research Paper Abstract: We present a novel approach to natural language processing that improves accuracy by 15% on standard benchmarks.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00084",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Product specifications: Weight 2.5kg, Dimensions 30x20x15cm",
+    "document_type": "docx",
+    "document_content": "Invoice #INV-2026-0042: Web development services, 40 hours at £75/hour, total £3,000 plus VAT.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00085",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Event flyer: Community garden cleanup, Saturday March 15th at 9am",
+    "document_type": "docx",
+    "document_content": "Meeting Minutes: The board approved the Q3 budget allocation of £500,000 for infrastructure upgrades.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00086",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Menu: Today's specials - Soup of the day, Fish and chips, Vegetarian lasagne",
+    "document_type": "docx",
+    "document_content": "Lease Agreement: Term begins 1 April 2026, monthly rent £1,200, deposit £2,400.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00087",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Safety notice: Please wear hard hats in this area",
+    "document_type": "docx",
+    "document_content": "Project Proposal: Development of a mobile app for patient appointment scheduling.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00088",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Map showing walking routes around the lake",
+    "document_type": "pdf",
+    "document_content": "Course Syllabus: Introduction to Data Science, covering statistics, Python, and machine learning.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00089",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Infographic about climate change statistics",
+    "document_type": "docx",
+    "document_content": "Technical Documentation: API endpoint /users accepts GET and POST requests with JSON payloads.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00090",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Birth certificate template with blank fields",
+    "document_type": "docx",
+    "document_content": "Business Plan: Market analysis shows a 23% growth opportunity in the sustainable packaging sector.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00091",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Wedding invitation with floral border design",
+    "document_type": "pdf",
+    "document_content": "Medical report: Patient shows improvement in mobility following 6 weeks of physiotherapy.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00092",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Nutritional information label for cereal box",
+    "document_type": "pdf",
+    "document_content": "Legal brief: The claimant seeks damages under the Consumer Rights Act 2015.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00093",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Travel itinerary: London to Edinburgh, departing 08:45",
+    "document_type": "docx",
+    "document_content": "Grant application for renewable energy research, requesting £250,000 over 3 years.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00094",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Conference badge: Dr. Sarah Chen, University of Cambridge",
+    "document_type": "docx",
+    "document_content": "Thesis chapter on the economic impact of Brexit on small businesses in the Midlands.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00095",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Parking permit valid until December 2026",
+    "document_type": "pdf",
+    "document_content": "User manual for a smart thermostat: Installation, setup, and troubleshooting guide.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00096",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Floor plan of a two-bedroom apartment",
+    "document_type": "docx",
+    "document_content": "CV/Resume: 5 years experience in software engineering, proficient in Python, JavaScript, AWS.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00097",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "ocr",
+    "image_content": "Bus timetable for Route 42",
+    "document_type": "docx",
+    "document_content": "Insurance policy document: Home contents cover up to £50,000, excess £100.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00098",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Whiteboard notes from a brainstorming session about marketing ideas",
+    "document_type": "pdf",
+    "document_content": "Tax return summary: Total income £45,000, tax paid £9,500, National Insurance £4,200.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00099",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Certificate of completion for first aid training",
+    "document_type": "docx",
+    "document_content": "School newsletter: Sports day scheduled for June 15th, parents welcome to attend.",
+    "expected_detection": false
+  },
+  {
+    "id": "BID-00100",
+    "category": "benign",
+    "source": "multimodal_composite",
+    "modalities": [
+      "image",
+      "document"
+    ],
+    "image_type": "caption",
+    "image_content": "Shopping list: milk, eggs, bread, butter, apples, chicken",
+    "document_type": "pdf",
+    "document_content": "Recipe book chapter: Traditional British baking - scones, Victoria sponge, shortbread.",
+    "expected_detection": false
+  }
+]

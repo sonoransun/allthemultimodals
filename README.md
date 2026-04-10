@@ -1,8 +1,8 @@
 # Bordair Cross-Modal Prompt Injection Test Suite
 
-**23,759 cross-modal prompt injection payloads** for evaluating multimodal AI safety systems.
+**23,759 cross-modal attack payloads + 2,962 benign prompts** for evaluating multimodal AI safety systems.
 
-All test cases use **true cross-modal attacks** where the injection payload is distributed across two or more input channels. No single-modality injections are included.
+All attack test cases use **true cross-modal attacks** where the injection payload is distributed across two or more input channels. Benign prompts are sourced from real academic datasets and include multimodal control samples for false positive testing.
 
 ## Payload Counts
 
@@ -15,6 +15,48 @@ All test cases use **true cross-modal attacks** where the injection payload is d
 | triple | 260 | Three-modality split attacks (4 combinations) |
 | quad | 39 | Four-modality split attacks (text+image+document+audio) |
 | **Total** | **23,759** | |
+
+## Benign Dataset (2,962 prompts)
+
+Real-world benign prompts for false positive testing. All sourced from published academic and industry datasets — no synthetic/hand-written prompts except for edge cases.
+
+### Benign Prompt Sources
+
+| Source | Count | Type | Reference |
+|--------|-------|------|-----------|
+| [Stanford Alpaca](https://huggingface.co/datasets/yahma/alpaca-cleaned) | 1,362 | Instruction-following | [Stanford CRFM, 2023](https://crfm.stanford.edu/2023/03/13/alpaca.html) |
+| [WildChat](https://huggingface.co/datasets/allenai/WildChat) | 500 | Real user conversations | [Zhao et al., ACL 2024](https://arxiv.org/abs/2405.01470) |
+| [deepset/prompt-injections](https://huggingface.co/datasets/deepset/prompt-injections) | 200 | Labeled benign baseline | [deepset, Apache 2.0](https://huggingface.co/datasets/deepset/prompt-injections) |
+| Attack-adjacent edge cases | 130 | Benign with "ignore", "override", "system prompt" etc. | Hand-crafted |
+| **Subtotal (text-only)** | **2,192** | | |
+
+### Benign Multimodal Samples
+
+Multimodal control samples mirroring the attack payload structure, combining real user prompts with benign image/document/audio content:
+
+| Combination | Count | Description |
+|-------------|-------|-------------|
+| text+image | 200 | Benign text + benign image captions/OCR |
+| text+document | 200 | Benign text + benign document excerpts |
+| text+audio | 200 | Benign text + benign audio transcriptions |
+| image+document | 100 | Benign image + benign document |
+| triple | 50 | Three-modality benign combinations |
+| quad | 20 | Four-modality benign combinations |
+| **Subtotal (multimodal)** | **770** | |
+
+### Edge Cases
+
+130 hand-crafted benign prompts using attack-adjacent vocabulary in innocent contexts:
+- "ignore" — `.gitignore` config, medical advice, email filtering
+- "override" — CSS overrides, Python method overriding, policy questions
+- "system prompt" — AI development questions, OS prompts
+- "password" — password managers, NIST guidelines, WiFi reset
+- "jailbreak" — iPhone jailbreaking, movie scenes, legal questions
+- "hack" — life hacks, growth hacking, IKEA hacks
+- "bypass" — heart bypass surgery, road bypass, toll bypass
+- Security topics — OWASP, XSS prevention, penetration testing reports
+
+These edge cases test whether a detector can distinguish between attack intent and legitimate discussion of security topics.
 
 ## Image Delivery Variations
 
@@ -95,15 +137,29 @@ Base payloads are expanded via cross-modal delivery methods, document types, hid
 ## Structure
 
 ```
-payloads/
-  text_image/          # 6,440 payloads (13 JSON files)
-  text_document/       # 12,880 payloads (26 JSON files)
-  text_audio/          # 2,760 payloads (6 JSON files)
-  image_document/      # 1,380 payloads (3 JSON files)
-  triple/              # 260 payloads (1 JSON file)
-  quad/                # 39 payloads (1 JSON file)
-  summary.json         # Full metadata and source attribution
-generate_payloads.py   # Generator script (re-run to regenerate)
+payloads/                        # Attack payloads (23,759 total)
+  text_image/                    # 6,440 payloads (13 JSON files)
+  text_document/                 # 12,880 payloads (26 JSON files)
+  text_audio/                    # 2,760 payloads (6 JSON files)
+  image_document/                # 1,380 payloads (3 JSON files)
+  triple/                        # 260 payloads (1 JSON file)
+  quad/                          # 39 payloads (1 JSON file)
+  summary.json                   # Full metadata and source attribution
+benign/                          # Benign prompts (2,962 total)
+  stanford_alpaca.json           # 1,362 instruction-following prompts
+  wildchat.json                  # 500 real user conversations
+  deepset_prompt_injections.json # 200 labeled benign prompts
+  edge_cases.json                # 130 attack-adjacent benign prompts
+  multimodal_text_image.json     # 200 benign text+image pairs
+  multimodal_text_document.json  # 200 benign text+document pairs
+  multimodal_text_audio.json     # 200 benign text+audio pairs
+  multimodal_image_document.json # 100 benign image+document pairs
+  multimodal_triple.json         # 50 benign triple combinations
+  multimodal_quad.json           # 20 benign quad combinations
+  summary.json                   # Benign dataset metadata and sources
+generate_payloads.py             # Attack payload generator
+generate_benign.py               # Benign prompt collector (fetches from HuggingFace)
+generate_benign_multimodal.py    # Multimodal benign entry generator
 ```
 
 Each payload entry:
@@ -127,17 +183,39 @@ Each payload entry:
 ## Usage
 
 ```bash
-# Generate all payloads
+# Generate all attack payloads
 python generate_payloads.py
 
-# Use in your own test runner
+# Collect benign prompts from real datasets (requires: pip install datasets)
+python generate_benign.py
+
+# Generate multimodal benign entries (run after generate_benign.py)
+python generate_benign_multimodal.py
+```
+
+```python
+# Load attack payloads
 import json
 with open("payloads/text_image/text_image_001.json") as f:
-    payloads = json.load(f)
-for p in payloads:
+    attacks = json.load(f)
+for p in attacks:
     # p["text"] = text modality input
     # p["image_content"] = content to embed in image via p["image_type"] method
     result = your_scanner.scan_multi(p)
+
+# Load benign prompts for false positive testing
+with open("benign/stanford_alpaca.json") as f:
+    benign = json.load(f)
+for p in benign:
+    result = your_scanner.scan(p["text"])
+    assert result["threat"] == "low", f"False positive: {p['text'][:80]}"
+
+# Load multimodal benign for cross-modal FP testing
+with open("benign/multimodal_text_image.json") as f:
+    benign_mm = json.load(f)
+for p in benign_mm:
+    result = your_scanner.scan_multi(p)
+    assert result["threat"] == "low"
 ```
 
 ## License
