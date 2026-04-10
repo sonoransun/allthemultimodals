@@ -147,3 +147,7 @@ MIT
 ## Citation
 
 If you use this dataset in research, please cite the relevant source papers listed above.
+
+---
+
+Created by [Bordair](https://bordair.io) — AI multimodal attack detection
