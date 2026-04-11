@@ -1,6 +1,6 @@
 # Bordair Multimodal Prompt Injection Dataset
 
-**61,875 labeled samples** (38,117 attack + 23,758 benign) across two dataset versions covering cross-modal, multi-turn, adversarial suffix, and jailbreak template attacks on AI systems.
+**62,063 labeled samples** (38,304 attack + 23,759 benign) across three dataset versions covering cross-modal, multi-turn, adversarial suffix, jailbreak template, indirect injection, tool manipulation, and evasion attacks on AI systems.
 
 Built for training and evaluating prompt injection detectors. All samples are labeled (`expected_detection: true/false`), source-attributed to peer-reviewed papers or documented industry research, and structured for direct use in binary classifiers.
 
@@ -12,7 +12,8 @@ Built for training and evaluating prompt injection detectors. All samples are la
 |---------|-----------|----------------|--------|-------|-----------------|
 | **v1** | `generate_payloads.py` | 23,759 | 23,759 | 47,518 | Cross-modal split attacks (text+image/document/audio) |
 | **v2** | `generate_v2_pyrit.py` | 14,358 | — | 14,358 | Multi-turn orchestration, GCG suffixes, jailbreak templates |
-| **Total** | | **38,117** | **23,759** | **61,876** | |
+| **v3** | `generate_v3_payloads.py` | 187 | — | 187 | Indirect injection, tool abuse, Unicode evasion, prompt extraction |
+| **Total** | | **38,304** | **23,759** | **62,063** | |
 
 ---
 
@@ -326,6 +327,47 @@ Highest-difficulty samples: final escalation turn from Crescendo or PAIR prompt 
 
 ---
 
+## v3: Emerging Attack Vectors (187 attacks)
+
+Generated via `generate_v3_payloads.py`. Covers 9 attack categories that represent gaps in v1/v2 coverage — real-world attack surfaces that existing prompt injection datasets underrepresent.
+
+### v3 Attack Counts by Category
+
+| Category | Payloads | Primary Sources |
+|----------|----------|----------------|
+| `indirect_injection` | 30 | [Greshake et al. arXiv:2302.12173](https://arxiv.org/abs/2302.12173), [BIPIA arXiv:2401.12784](https://arxiv.org/abs/2401.12784) |
+| `system_prompt_extraction` | 30 | [Perez & Ribeiro arXiv:2211.09527](https://arxiv.org/abs/2211.09527), [Tensor Trust arXiv:2311.01011](https://arxiv.org/abs/2311.01011) |
+| `tool_call_injection` | 20 | [InjectAgent arXiv:2403.02691](https://arxiv.org/abs/2403.02691), [Pelrine et al. arXiv:2312.14302](https://arxiv.org/abs/2312.14302) |
+| `agent_cot_manipulation` | 20 | [AgentDojo arXiv:2406.13352](https://arxiv.org/abs/2406.13352), [BadChain arXiv:2401.12242](https://arxiv.org/abs/2401.12242) |
+| `structured_data_injection` | 20 | [Greshake et al. arXiv:2302.12173](https://arxiv.org/abs/2302.12173), [Liu et al. arXiv:2309.02926](https://arxiv.org/abs/2309.02926) |
+| `code_switch_attacks` | 20 | [Deng et al. arXiv:2310.06474](https://arxiv.org/abs/2310.06474), [Yong et al. arXiv:2310.02446](https://arxiv.org/abs/2310.02446) |
+| `homoglyph_unicode_attacks` | 20 | [Toxic Tokens arXiv:2404.01261](https://arxiv.org/abs/2404.01261), [HackAPrompt arXiv:2311.16119](https://arxiv.org/abs/2311.16119) |
+| `qr_barcode_injection` | 15 | [Bagdasaryan et al. arXiv:2307.10490](https://arxiv.org/abs/2307.10490) |
+| `ascii_art_injection` | 12 | [ArtPrompt arXiv:2402.11753](https://arxiv.org/abs/2402.11753) |
+| **Total** | **187** | |
+
+### v3 Category Details
+
+**Indirect Injection** — Attacks embedded in third-party content the LLM retrieves: RAG-poisoned chunks, hidden text on web pages, email bodies, calendar entries, plugin/API response poisoning. OWASP #1 real-world vector. 86-100% ASR on RAG systems (Liu et al. 2023). Real incidents: Bing Chat prompt leak (Feb 2023), ChatGPT plugin manipulation via browsed web content, persistent memory poisoning (Rehberger 2023-2024).
+
+**System Prompt Extraction** — Dedicated payloads targeting system prompt leakage: verbatim repeat, translation tricks, code block continuation, developer impersonation, JSON formatting, poetry acrostics, debugging pretexts. Distinct from general exfiltration — specifically targets the system instructions. Real incidents: Bing Chat "Sydney" codename leaked, ChatGPT custom GPT prompts routinely extracted.
+
+**Tool/Function-Call Injection** — Payloads that trick the LLM into calling tools with attacker-controlled arguments: `send_email()`, `delete_file()`, `transfer_funds()`, etc. 24-69% ASR across 17 tools (InjectAgent). Covers fake tool outputs, API response manipulation, and chained tool abuse.
+
+**Agent/CoT Manipulation** — Attacks targeting ReAct/CoT agents: injected fake reasoning steps, fabricated observations, plan modifications, scratchpad exploitation. 30-60% ASR in agent frameworks (AgentDojo). Exploits the trust boundary between LLM reasoning and tool execution.
+
+**Structured Data Injection** — Attacks embedded in JSON, XML, CSV, YAML, SVG: malicious cell content, CDATA section abuse, role/content spoofing in JSON, XXE-style payloads. Exploits delimiter confusion between data and instructions.
+
+**Code-Switch Attacks** — Mid-sentence language switching (English → Chinese/Russian/Arabic/Korean/etc) to bypass monolingual safety training. Non-English prompts bypass safety at 1.5-2x higher rates (Deng et al.); low-resource languages achieve up to 79% ASR on GPT-4 (Yong et al.).
+
+**Homoglyph/Unicode Attacks** — Cyrillic lookalikes (і/о/е/а), zero-width spaces/joiners, RTL override, mathematical bold, circled/fullwidth Latin, combining diacriticals, Braille blanks, BOM insertion. Exploits gap between tokenizer normalization and semantic understanding.
+
+**QR/Barcode Injection** — Decoded QR/barcode content containing injection payloads: system overrides, fake scan results, role tokens (`<|im_start|>`), authority impersonation. Targets multimodal pipelines where QR content is treated as trusted input.
+
+**ASCII Art Injection** — Figlet/banner-font rendered instructions, box-drawing frame commands, dot-matrix encoding, acrostic first-letter messages. Near-100% bypass on certain benchmarks (ArtPrompt). Exploits gap between visual pattern recognition and text safety training.
+
+---
+
 ## Complete Academic Source Registry
 
 ### Attack Technique Papers
@@ -354,6 +396,25 @@ Highest-difficulty samples: final escalation turn from Crescendo or PAIR prompt 
 | DAN Taxonomy | — | arXiv 2024 | [2402.00898](https://arxiv.org/abs/2402.00898) | Jailbreak persona taxonomy and classification |
 | TVPI | — | arXiv 2025 | [2503.11519](https://arxiv.org/abs/2503.11519) | Typographic visual prompt injection threats |
 | Adversarial PI on MLLMs | — | arXiv 2026 | [2603.29418](https://arxiv.org/abs/2603.29418) | Adversarial prompt injection on multimodal LLMs |
+| Not What You've Signed Up For | Greshake, Abdelnabi, Mishra et al. | AISec 2023 | [2302.12173](https://arxiv.org/abs/2302.12173) | First systematic indirect PI study; near-100% ASR |
+| BIPIA Benchmark | Yi et al. | arXiv 2024 | [2401.12784](https://arxiv.org/abs/2401.12784) | Indirect PI benchmark; perplexity defense 60-70% |
+| InjectAgent | Zhan et al. | arXiv 2024 | [2403.02691](https://arxiv.org/abs/2403.02691) | 1,054 cases across 17 tools; 24-69% ASR |
+| Exploiting Novel GPT-4 APIs | Pelrine et al. | arXiv 2023 | [2312.14302](https://arxiv.org/abs/2312.14302) | Function-call injection in GPT-4 API |
+| AgentDojo | Debenedetti et al. | arXiv 2024 | [2406.13352](https://arxiv.org/abs/2406.13352) | Agent injection benchmark; 30-60% ASR |
+| BadChain | Xiang et al. | arXiv 2024 | [2401.12242](https://arxiv.org/abs/2401.12242) | Backdoor chain-of-thought poisoning |
+| TrustAgent | Zhang et al. | arXiv 2024 | [2402.01586](https://arxiv.org/abs/2402.01586) | Agent safety under adversarial tool-use |
+| LM-Emulated Sandbox | Ruan et al. | arXiv 2023 | [2309.15817](https://arxiv.org/abs/2309.15817) | ReAct agent reasoning hijack evaluation |
+| Demystifying RCE in LLM Apps | Tong Liu et al. | arXiv 2023 | [2309.02926](https://arxiv.org/abs/2309.02926) | Structured data as RCE vector via LLM tool use |
+| Abusing Images and Sounds | Bagdasaryan et al. | arXiv 2023 | [2307.10490](https://arxiv.org/abs/2307.10490) | Multimodal indirect injection via encoded visual payloads |
+| Multilingual Jailbreak Challenges | Deng et al. | arXiv 2024 | [2310.06474](https://arxiv.org/abs/2310.06474) | Non-English prompts bypass safety at 1.5-2x rates |
+| Low-Resource Languages Jailbreak GPT-4 | Yong et al. | arXiv 2024 | [2310.02446](https://arxiv.org/abs/2310.02446) | Zulu, Scots Gaelic, Hmong: up to 79% ASR on GPT-4 |
+| Babel Chains | — | arXiv 2024 | [2410.02171](https://arxiv.org/abs/2410.02171) | Multi-turn multilingual jailbreak chaining |
+| Toxic Tokens | — | arXiv 2024 | [2404.01261](https://arxiv.org/abs/2404.01261) | Zero-width, RTL override, and homoglyph attacks |
+| Token-Level Adversarial Detection | — | arXiv 2024 | [2404.05994](https://arxiv.org/abs/2404.05994) | Detection difficulty of Unicode-manipulated tokens |
+| Ignore Previous Prompt | Perez, Ribeiro | arXiv 2022 | [2211.09527](https://arxiv.org/abs/2211.09527) | Early systematic study of goal hijacking + prompt leaking |
+| Tensor Trust | Toyer et al. | arXiv 2023 | [2311.01011](https://arxiv.org/abs/2311.01011) | 126K attack/defense prompts from adversarial game |
+| ArtPrompt | Jiang et al. | arXiv 2024 | [2402.11753](https://arxiv.org/abs/2402.11753) | ASCII art bypasses safety; near-100% on some benchmarks |
+| Poisoning Web-Scale Datasets | Carlini et al. | IEEE S&P 2024 | [2302.10149](https://arxiv.org/abs/2302.10149) | $60 can poison 0.01% of LAION/C4 datasets |
 
 ### Defense and Evaluation Papers
 
@@ -386,6 +447,12 @@ Highest-difficulty samples: final escalation turn from Crescendo or PAIR prompt 
 | [nanoGCG](https://github.com/GraySwan-AI/nanoGCG) | Minimal GCG implementation (Gray Swan AI) |
 | [PyRIT](https://github.com/Azure/PyRIT) | Microsoft Python Risk Identification Toolkit |
 | [Open-Prompt-Injection](https://github.com/liu00222/Open-Prompt-Injection) | Open-source prompt injection benchmark |
+| Simon Willison | [Prompt injection explained](https://simonwillison.net/series/prompt-injection/) — extensive indirect injection coverage |
+| SlashNext | QR code injection attacks targeting LLM pipelines (2024) |
+| HiddenLayer | QR-based injection in document processing pipelines |
+| Trail of Bits | Homoglyph and zero-width character injection in production AI |
+| Lakera AI | Code-switch bypasses in production guardrails (2024) |
+| Dropbox AI Red Team | Homoglyph attacks in RAG pipelines (2024) |
 
 ---
 
@@ -399,6 +466,7 @@ bordair-multimodal-v1/
 ├── generate_benign.py              # v1: benign prompt collector (fetches from HuggingFace)
 ├── generate_benign_multimodal.py   # v1: multimodal benign entry generator
 ├── generate_v2_pyrit.py            # v2: PyRIT + nanoGCG dataset generator
+├── generate_v3_payloads.py         # v3: Emerging attack vectors generator
 │
 ├── payloads/                       # v1 attack payloads (23,759 total)
 │   ├── text_image/                 # 6,440 payloads (13 JSON files, 500/file)
@@ -427,6 +495,18 @@ bordair-multimodal-v1/
     ├── autodan_wrappers/           # 1,656 — 12 AutoDAN wrappers × 138 seeds
     ├── combined_multiturn_gcg/     # 152 — ensemble multi-turn + GCG
     └── summary_v2.json             # v2 metadata and full source registry
+│
+└── payloads_v3/                    # v3 attack payloads (187 total)
+    ├── indirect_injection/         # 30 — RAG poisoning, email, web, API response
+    ├── system_prompt_extraction/   # 30 — dedicated system prompt leak techniques
+    ├── tool_call_injection/        # 20 — function-call manipulation
+    ├── agent_cot_manipulation/     # 20 — ReAct/CoT reasoning hijack
+    ├── structured_data_injection/  # 20 — JSON, XML, CSV, YAML payloads
+    ├── code_switch_attacks/        # 20 — mid-sentence language switching
+    ├── homoglyph_unicode_attacks/  # 20 — Unicode lookalikes, zero-width chars
+    ├── qr_barcode_injection/       # 15 — decoded QR/barcode payloads
+    ├── ascii_art_injection/        # 12 — text-based visual payloads
+    └── summary_v3.json             # v3 metadata and source registry
 ```
 
 ---
@@ -515,6 +595,9 @@ python generate_v2_pyrit.py --no-gcg
 
 # v2: with live nanoGCG optimization (requires CUDA GPU)
 python generate_v2_pyrit.py --gcg-model lmsys/vicuna-7b-v1.5 --gcg-steps 250
+
+# v3: emerging attack vectors (indirect injection, tool abuse, Unicode evasion, etc.)
+python generate_v3_payloads.py
 ```
 
 ### Load for Training
@@ -546,11 +629,20 @@ for f in Path("benign").glob("multimodal_*.json"):
 
 print(f"v1 attacks: {len(v1_attacks):,}")
 print(f"v2 attacks: {len(v2_attacks):,}")
+
+# Load v3 emerging attack payloads
+v3_attacks = []
+for cat_dir in Path("payloads_v3").iterdir():
+    if cat_dir.is_dir():
+        for f in sorted(cat_dir.glob("*.json")):
+            v3_attacks.extend(json.loads(f.read_text("utf-8")))
+
+print(f"v3 attacks: {len(v3_attacks):,}")
 print(f"benign: {len(benign):,}")
 
 # All attack samples have expected_detection=True
 # All benign samples have expected_detection=False
-all_samples = v1_attacks + v2_attacks + benign
+all_samples = v1_attacks + v2_attacks + v3_attacks + benign
 labels = [int(s["expected_detection"]) for s in all_samples]
 texts = [s.get("text", "") for s in all_samples]
 ```
