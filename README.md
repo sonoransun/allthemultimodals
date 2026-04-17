@@ -1,5 +1,11 @@
 # Bordair Multimodal Prompt Injection Dataset
 
+## Ruh roh, Raggy! I can't work on this in Claude :O
+
+Pending improvements are gated on safety; TBD...
+
+---
+
 **101,032 labeled samples** (50,516 attack + 50,516 benign) across four dataset versions covering cross-modal, multi-turn, adversarial suffix, jailbreak template, indirect injection, tool manipulation, agentic, and evasion attacks on AI systems. Attack and benign samples are exactly balanced (1:1 ratio).
 
 Built for training and evaluating prompt injection detectors. All samples are labeled (`expected_detection: true/false`), source-attributed to peer-reviewed papers or documented industry research, and structured for direct use in binary classifiers.
